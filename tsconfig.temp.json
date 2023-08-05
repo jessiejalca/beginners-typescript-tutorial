@@ -14,6 +14,6 @@
     "skipLibCheck": true
   },
   "include": [
-    "/Users/jessiejalca/development/tutorials/beginners-typescript-tutorial/src/03-optional-properties.problem.ts"
+    "/Users/jessiejalca/development/tutorials/beginners-typescript-tutorial/src/04-optional-params.problem.ts"
   ]
 }
