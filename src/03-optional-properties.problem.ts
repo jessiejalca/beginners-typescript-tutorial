@@ -1,6 +1,7 @@
 import { expect, it } from "vitest"
 
 // Mark properties as optional with a ? at the end of the name
+// This works on "type" aliases also
 export const getName = (params: { first: string; last?: string }) => {
   if (params.last) {
     return `${params.first} ${params.last}`
