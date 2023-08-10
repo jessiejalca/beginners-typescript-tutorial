@@ -14,6 +14,6 @@
     "skipLibCheck": true
   },
   "include": [
-    "/Users/jessiejalca/development/tutorials/beginners-typescript-tutorial/src/05-assigning-types-to-variables.problem.ts"
+    "/Users/jessiejalca/development/tutorials/beginners-typescript-tutorial/src/06-unions.problem.ts"
   ]
 }
