@@ -3,7 +3,10 @@ interface User {
   firstName: string;
   lastName: string;
   role: "admin" | "user" | "super-admin";
-  posts: Post;
+  // Denote arrays of a type like this:
+  posts: Post[];
+  // or like this:
+  // posts: Array<Post>
 }
 
 interface Post {
