@@ -1,7 +1,10 @@
 import { expect, it } from "vitest";
 import { Equal, Expect } from "./helpers/type-utils";
 
-const guitarists = new Set();
+// We can use this for all types of JS constructs
+// to be more specific about what is accepted inside
+// of them
+const guitarists = new Set<string>();
 
 guitarists.add("Jimi Hendrix");
 guitarists.add("Eric Clapton");
