@@ -1,7 +1,15 @@
 import { expect, it } from "vitest";
 
+// I used interface/type as a solution here, 
+// but the Record type or an inline type can
+// work also (see solution files for more info)
+type CacheDictionary = {
+  [id: string]: string
+}
+// interface CacheDictionary {...}
+
 const createCache = () => {
-  const cache = {};
+  const cache: CacheDictionary = {};
 
   const add = (id: string, value: string) => {
     cache[id] = value;
