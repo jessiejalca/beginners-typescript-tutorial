@@ -1,6 +1,8 @@
 import { expect, it } from "vitest"
 
 const coerceAmount = (amount: number | { amount: number }) => {
+  // checking typeof a parameter is a great way
+  // to break down union types
   if (typeof amount === "object") {
     return amount["amount"]
   } else {
