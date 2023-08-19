@@ -1,9 +1,9 @@
-import { Equal, Expect } from "./helpers/type-utils";
+import { Equal, Expect } from "./helpers/type-utils"
 
 interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
+  id: string
+  firstName: string
+  lastName: string
 }
 
 /**
@@ -11,6 +11,13 @@ interface User {
  * firstName and lastName properties of User?
  */
 
-type MyType = unknown;
+// Use the Pick type utility to cherry pick specific
+// pieces you want to keep for another type or interface
 
-type tests = [Expect<Equal<MyType, { firstName: string; lastName: string }>>];
+type MyType = Pick<User, "firstName" | "lastName">
+
+// Another, arguable less verbose in this example, method
+// we can use is Omit, which essentially does the opposite
+// of Pick
+
+type tests = [Expect<Equal<MyType, { firstName: string; lastName: string }>>]
