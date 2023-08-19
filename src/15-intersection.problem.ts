@@ -1,20 +1,27 @@
 interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
+  id: string
+  firstName: string
+  lastName: string
 }
 
 interface Post {
-  id: string;
-  title: string;
-  body: string;
+  id: string
+  title: string
+  body: string
 }
 
 /**
  * How do we type this return statement so it's both
  * User AND { posts: Post[] }
  */
-export const getDefaultUserAndPosts = (): unknown => {
+
+// The difference b/w using "extends" and "&" is that with
+// "extends", you inherit; with "&", you combine.
+
+// We can use this also to create a new type that combines
+// multiple types.
+
+export const getDefaultUserAndPosts = (): User & { posts: Post[] } => {
   return {
     id: "1",
     firstName: "Matt",
@@ -26,9 +33,9 @@ export const getDefaultUserAndPosts = (): unknown => {
         body: "It's pretty edam difficult",
       },
     ],
-  };
-};
+  }
+}
 
-const userAndPosts = getDefaultUserAndPosts();
+const userAndPosts = getDefaultUserAndPosts()
 
-console.log(userAndPosts.posts[0]);
+console.log(userAndPosts.posts[0])
